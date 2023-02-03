@@ -536,7 +536,7 @@
 		"fieldName"		"Label2"
 		"xpos"		"40"
 		"ypos"		"94"
-		"wide"		"120"
+		"wide"		"200"
 		"tall"		"24"
 		"autoResize"		"0"
 		"pinCorner"		"0"
