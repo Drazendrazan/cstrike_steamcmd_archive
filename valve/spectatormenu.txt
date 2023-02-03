@@ -26,23 +26,23 @@
 //--------------------------------------------------------
 // Everything below here is editable
 
-"5" "#Valve_Close" 	"spec_menu 0"
+"5" "Close" 	"spec_menu 0"
 
-"4" "#Valve_Help"	"spec_help"
+"4" "Help"	"spec_help"
 
-"3" "#Valve_Settings"
+"3" "Settings"
 {	
-	TOGGLE 	"4" "#Valve_Chat_Messages"	"hud_saytext"
+	TOGGLE 	"4" "Chat Messages"	"hud_saytext"
 	
-	TOGGLE	"3" "#Valve_Show_Status"	"spec_drawstatus"
+	TOGGLE	"3" "Show Status"	"spec_drawstatus"
 	
-	TOGGLE	"2" "#Valve_View_Cone"		"spec_drawcone"
+	TOGGLE	"2" "View Cone"		"spec_drawcone"
 	
-	TOGGLE	"1" "#Valve_Player_Names"	"spec_drawnames"
+	TOGGLE	"1" "Player Names"	"spec_drawnames"
 }
 
-TOGGLE	"2" "#Valve_Auto_Director"	"spec_autodirector"
-"1" "#Valve_Show_Score"	"togglescores"
+TOGGLE	"2" "Auto Director"	"spec_autodirector"
+"1" "Show Scores"	"togglescores"
 
 // Here are the rest of the buttons and submenus
 // You can change these safely if you want.

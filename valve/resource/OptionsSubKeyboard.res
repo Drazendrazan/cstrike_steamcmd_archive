@@ -6,7 +6,7 @@
 		"fieldName"		"Defaults"
 		"xpos"		"12"
 		"ypos"		"278"
-		"wide"		"105"
+		"wide"		"90"
 		"tall"		"24"
 		"autoResize"		"0"
 		"pinCorner"		"0"

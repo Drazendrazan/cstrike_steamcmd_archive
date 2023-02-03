@@ -7,7 +7,7 @@
 		"xpos"		"210"
 		"ypos"		"162"
 		"wide"		"380"
-		"tall"		"256"
+		"tall"		"356"
 		"autoResize"		"0"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -81,6 +81,20 @@
 		"Command"		"Cancel"
 		"Default"		"1"
 	}
+	"BannerAd"
+	{
+		"ControlName"		"HTML"
+		"fieldName"		"BannerAd"
+		"xpos"		"20"
+		"ypos"		"202"
+		"wide"		"340"
+		"tall"		"56"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+	}
 	"Divider1"
 	{
 		"ControlName"		"Divider"
@@ -94,6 +108,24 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"		"0"
+	}
+	"Label1"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"Label1"
+		"xpos"		"20"
+		"ypos"		"177"
+		"wide"		"340"
+		"tall"		"24"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"labelText"		"#GameUI_LoadingDialog_ContentHosting"
+		"textAlignment"		"west"
+		"dulltext"		"1"
+		"brighttext"		"0"
 	}
 	"SecondaryProgressLabel"
 	{
@@ -132,12 +164,26 @@
 		"brighttext"		"0"
 	}
 
+	"Divider2"
+	{
+		"ControlName"		"Divider"
+		"fieldName"		"Divider1"
+		"xpos"		"20"
+		"ypos"		"269"
+		"wide"		"340"
+		"tall"		"2"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+	}
 	"VACInfoLabel"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"VACInfoLabel"
 		"xpos"		"90"
-		"ypos"		"180"
+		"ypos"		"280"
 		"wide"		"260"
 		"tall"		"60"
 		"autoResize"		"0"
@@ -156,7 +202,7 @@
 		"ControlName"		"ImagePanel"
 		"fieldName"		"VACImage"
 		"xpos"		"30"
-		"ypos"		"190"
+		"ypos"		"290"
 		"wide"		"64"
 		"tall"		"64"
 		"autoResize"		"0"

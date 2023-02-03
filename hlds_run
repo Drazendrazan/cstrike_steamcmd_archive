@@ -16,7 +16,7 @@ init() {
 	GAME="valve"
 	DEBUG=0
 	RESTART="yes"
-	HL=./hlds_linux
+	HL=./hlds_i486
 	HL_DETECT=1
 	TIMEOUT=10 # time to wait after a crash (in seconds)
 	CRASH_DEBUG_MSG="email debug.log to linux@valvesoftware.com"
@@ -73,7 +73,7 @@ init() {
 			shift ;;
 		"-autoupdate")
 			AUTO_UPDATE="yes"
-			STEAM="steamcmd/steamcmd.sh"
+			STEAM="./steam"
 			RESTART="yes" ;;
 		"-steamerr")
 			STEAMERR=1 ;;
@@ -101,12 +101,18 @@ init() {
 		quit 1
 	fi
 
-	#if test 0 -eq "$NO_TRAP"; then
+	if test 0 -eq "$NO_TRAP"; then
 		# Set up the int handler
 		# N.B. Dont use SIGINT symbolic value
 		#  as its just INT under ksh
-		#trap "$SIGINT_ACTION" 2
-	#fi
+		trap "$SIGINT_ACTION" 2
+	fi
+
+	# Only detect the CPU if it hasnt been set with
+	# either environment or command line
+	if test "$HL_DETECT" -eq 1; then
+		detectcpu
+	fi
 
 	if test ! -f "$HL"; then
 		echo "Half-life binary '$HL' not found, exiting"
@@ -147,7 +153,7 @@ syntax () {
 
 	echo "Syntax:"
 	echo "$0 [-game <game>] [-debug] [-norestart] [-pidfile]"
-	echo "	[-binary [hlds_linux]"
+	echo "	[-binary [hlds_i486|hlds_i686|hlds_amd]"
 	echo "	[-timeout <number>] [-gdb <gdb>] [-autoupdate]"
 	echo "	[-steamerr] [-ignoresigint] [-beta <version>]"
 	echo "  [-debuglog <logname>]"
@@ -211,6 +217,66 @@ debugcore () {
 	fi
 }
 
+detectcpu() {
+	# Attempts to auto detect the CPU
+	echo "Auto detecting CPU"
+
+	if test "FreeBSD" = `uname`; then
+		PROC="/usr/compat/linux/proc"
+	else
+		PROC="/proc"
+	fi
+
+	if test -e $PROC/cpuinfo; then
+		CPU_VERSION="`grep "cpu family" $PROC/cpuinfo | cut -f2 -d":" | tr -d " " | uniq`";
+		if test $CPU_VERSION -lt 4; then
+			echo "Error: hlds_l REQUIRES a 486 CPU or better";
+			quit 1
+		elif test $CPU_VERSION -ge 15; then
+			# Core 2 or greater
+			echo "Using AMD Optimised binary."
+			HL=./hlds_amd
+		elif test $CPU_VERSION -ge 6; then
+			AMD="`grep AMD $PROC/cpuinfo`";
+			if test -n "$AMD"; then
+				echo "Using AMD Optimised binary."
+				HL=./hlds_amd
+			else
+				echo "Using Pentium II Optimised binary."
+
+				# there is a CPU manufactured by VIA that
+				# doesn't support some PII instructions...
+				# detect this.
+				VIACHIP=`grep CentaurHauls $PROC/cpuinfo`
+			
+				if test -z "$VIACHIP"; then
+					HL=./hlds_i686
+				fi
+			fi		
+		else
+			echo "Using default binary."
+		fi
+	elif test "FreeBSD" = `uname`; then
+		CPU="`grep 'CPU:' /var/run/dmesg.boot`"
+		AMD="`echo $CPU |grep AMD`"
+		K8="`echo $CPU |grep K8`"
+		I686="`echo $CPU |grep 686`"
+		if test -n "$AMD"; then
+			echo "Using AMD Optimised binary."
+			HL=./hlds_amd
+		elif test -n "$K8" ; then
+			echo "Using AMD Optimised binary."
+			HL=./hlds_amd
+		elif test -n "$I686" ; then
+			echo "Using Pentium II Optimised binary."
+			HL=./hlds_i686
+		else
+			echo "Using default binary."
+		fi
+	else
+		echo "Using default binary."
+	fi
+}
 
 update() {
 	updatesingle
@@ -223,12 +289,12 @@ updatesingle() {
 	if test -n "$AUTO_UPDATE"; then
 		if test -f "$STEAM"; then
 			echo "Updating server using Steam."
-			CMD="$STEAM +logon anonymous +force_install_dir .. +app_update 90 +quit"; 
+			CMD="$STEAM -command update -game $GAME -dir ."; 
 			if  test -n "$BETA_VERSION"; then
 			  CMD="$CMD -beta $BETA_VERSION";
 			fi
-			
-			STEAMEXE=steamcmd $CMD
+
+			$CMD
 			if test $? -ne 0; then
 				if test -n "$STEAMERR"; then
 					echo "`date`: Steam Update failed, exiting."
@@ -272,7 +338,7 @@ run() {
 			# Run the server
 			$HL_CMD
 			retval=$?
-			if test $retval -eq 0 && test -z "$RESTART" ; then
+			if test $retval -eq 0 && test -z "$AUTO_UPDATE"; then
 				break; # if 0 is returned then just quit
 			fi
 

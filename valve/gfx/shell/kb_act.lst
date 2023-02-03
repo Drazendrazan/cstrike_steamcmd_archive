@@ -13,7 +13,7 @@
 "+movedown"		"#Valve_Swim_Down"
 "+lookup"		"#Valve_Look_Up"
 "+lookdown"		"#Valve_Look_Down"
-"force_centerview"	"#Valve_Look_Straight_Ahead"
+"centerview"	"#Valve_Look_Straight_Ahead"
 "+strafe"		"#Valve_Strafe_Modifier"
 "+mlook"		"#Valve_Mouse_Look_Modifier"
 "+klook"		"#Valve_Keyboard_Look_Modifier"

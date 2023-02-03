@@ -109,6 +109,7 @@ DESCRIPTION INFO_OPTIONS
 		"#Cstrike_Automatic_Weapon_Switch"
 		{ BOOL }
 		{ "1" }
+		SetInfo
 	}
 
 	"hud_centerid"
