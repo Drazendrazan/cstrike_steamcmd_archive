@@ -72,7 +72,7 @@
 		"fieldName"		"Advanced"
 		"xpos"		"389"
 		"ypos"		"266"
-		"wide"		"90"
+		"wide"		"100"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -127,7 +127,7 @@
 		"editable"		"1"
 		"maxchars"		"63"
 		"NumericInputOnly"		"0"
-		"unicode"		"0"
+		"unicode" "1"
 	}
 	"Primary Color Slider"
 	{
@@ -151,7 +151,7 @@
 		"ControlName"		"CCvarSlider"
 		"fieldName"		"Secondary Color Slider"
 		"xpos"		"20"
-		"ypos"		"223"
+		"ypos"		"225"
 		"wide"		"140"
 		"tall"		"42"
 		"AutoResize"		"0"
@@ -167,9 +167,9 @@
 	{
 		"ControlName"		"CCvarToggleCheckButton"
 		"fieldName"		"High Quality Models"
-		"xpos"		"173"
+		"xpos"		"163"
 		"ypos"		"280"
-		"wide"		"174"
+		"wide"		"204"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -439,7 +439,7 @@
 		"fieldName"		"Label2"
 		"xpos"		"356"
 		"ypos"		"30"
-		"wide"		"124"
+		"wide"		"140"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
@@ -455,4 +455,4 @@
 		"wrap"		"0"
 	}
 }
- 
+

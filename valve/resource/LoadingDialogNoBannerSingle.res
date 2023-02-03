@@ -80,38 +80,6 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 	}
-	"Label1"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"Label1"
-		"xpos"		"20"
-		"ypos"		"109"
-		"wide"		"340"
-		"tall"		"24"
-		"autoResize"		"0"
-		"pinCorner"		"0"
-		"visible"		"0"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"labelText"		"#GameUI_LoadingDialog_ContentHosting"
-		"textAlignment"		"west"
-		"dulltext"		"1"
-		"brighttext"		"0"
-	}
-	"BannerAd"
-	{
-		"ControlName"		"HTML"
-		"fieldName"		"BannerAd"
-		"xpos"		"20"
-		"ypos"		"136"
-		"wide"		"340"
-		"tall"		"56"
-		"autoResize"		"0"
-		"pinCorner"		"0"
-		"visible"		"0"
-		"enabled"		"1"
-		"tabPosition"		"0"
-	}
 	"SecondaryProgressLabel"
 	{
 		"ControlName"		"Label"

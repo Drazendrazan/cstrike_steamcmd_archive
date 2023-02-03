@@ -26,12 +26,12 @@
 //--------------------------------------------------------
 // Everything below here is editable
 
-"6" "Chase Overview"	"spec_mode 6"
-"5" "Free Overview"	"spec_mode 5"
-"4" "First Person"	"spec_mode 4"
-"3" "Free Look"		"spec_mode 3"
-"2" "Free Chase Cam"	"spec_mode 2"
-"1" "Locked Chase Cam"	"spec_mode 1"
+"6" "#Spec_Mode6"	"spec_mode 6"
+"5" "#Spec_Mode5"	"spec_mode 5"
+"4" "#Spec_Mode4"	"spec_mode 4"
+"3" "#Spec_Mode3"	"spec_mode 3"
+"2" "#Spec_Mode2"	"spec_mode 2"
+"1" "#Spec_Mode1"	"spec_mode 1"
 
 
 

@@ -239,7 +239,7 @@
 		"fieldName"		"MilesVoiceLabel"
 		"xpos"			"43"
 		"ypos"			"250"
-		"wide"			"350"
+		"wide"			"400"
 		"tall"			"48"
 		"autoResize"		"0"
 		"pinCorner"		"0"
