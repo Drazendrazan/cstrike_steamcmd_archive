@@ -5,34 +5,33 @@
 	"name"		"Half-Life"
 	"StateFlags"		"68"
 	"installdir"		"Half-Life"
-	"LastUpdated"		"1555036571"
+	"LastUpdated"		"1570646674"
 	"UpdateResult"		"0"
-	"SizeOnDisk"		"445123067"
-	"buildid"		"3710249"
+	"SizeOnDisk"		"445129053"
+	"buildid"		"4243527"
 	"LastOwner"		"0"
 	"BytesToDownload"		"0"
 	"BytesDownloaded"		"0"
 	"AutoUpdateBehavior"		"0"
 	"AllowOtherDownloadsWhileRunning"		"0"
 	"ScheduledAutoUpdate"		"0"
-	"UserConfig"
-	{
-		"betakey"		"public"
-	}
 	"InstalledDepots"
 	{
 		"1"
 		{
-			"manifest"		"5409401804038872403"
+			"manifest"		"1321523826781086424"
 		}
 		"71"
 		{
-			"manifest"		"6410526555058638388"
+			"manifest"		"5170899268857602388"
 		}
 	}
 	"MountedDepots"
 	{
-		"1"		"5409401804038872403"
-		"71"		"6410526555058638388"
+		"1"		"1321523826781086424"
+		"71"		"5170899268857602388"
+	}
+	"UserConfig"
+	{
 	}
 }

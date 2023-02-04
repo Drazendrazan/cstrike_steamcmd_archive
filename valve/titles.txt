@@ -970,3 +970,54 @@ Spec_Duck
 {
 Press DUCK for Spectator Menu
 }
+
+Valve_Close
+{
+Close
+}
+
+Valve_Help
+{
+Help
+}
+
+Valve_Settings
+{
+Settings
+}
+
+Valve_Chat_Messages
+{
+Chat Messages
+}
+
+Valve_Show_Status
+{
+Show Status
+}
+
+Valve_View_Cone
+{
+View Cone
+}
+
+Valve_Player_Names
+{
+Player Names
+}
+
+Valve_PIP
+{
+Picture-In-Picture
+}
+
+Valve_Auto_Director
+{
+Auto Director
+}
+
+Valve_Show_Score
+{
+Show Scores
+}
+
