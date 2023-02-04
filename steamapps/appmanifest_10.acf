@@ -5,10 +5,10 @@
 	"name"		"Counter-Strike"
 	"StateFlags"		"68"
 	"installdir"		"Half-Life"
-	"LastUpdated"		"1553130642"
+	"LastUpdated"		"1555036571"
 	"UpdateResult"		"0"
-	"SizeOnDisk"		"292553637"
-	"buildid"		"3651481"
+	"SizeOnDisk"		"292553705"
+	"buildid"		"3710234"
 	"LastOwner"		"0"
 	"BytesToDownload"		"0"
 	"BytesDownloaded"		"0"
@@ -17,17 +17,17 @@
 	"ScheduledAutoUpdate"		"0"
 	"UserConfig"
 	{
-		"betakey"		"beta"
+		"betakey"		"public"
 	}
 	"InstalledDepots"
 	{
 		"11"
 		{
-			"manifest"		"7488507345669222643"
+			"manifest"		"8098553533444340691"
 		}
 	}
 	"MountedDepots"
 	{
-		"11"		"7488507345669222643"
+		"11"		"8098553533444340691"
 	}
 }
